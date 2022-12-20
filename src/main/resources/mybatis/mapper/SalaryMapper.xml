@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.SalaryMapper">
+	<select id="getSalaryOri" resultType="SalaryModel">
+		SELECT * FROM salaries limit 0, 3000000;
+	</select>
+	<select id="getSalary" resultType="SalaryModel" fetchSize="1000">
+		SELECT * FROM salaries limit 0, 3000000;
+	</select>
+	<select id="getAllSalary" parameterType="map" resultType="map" fetchSize="-2147483648">
+		SELECT * FROM salaries limit 0, 3000000;
+	</select>
+	
+</mapper>
